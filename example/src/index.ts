@@ -37,3 +37,5 @@ export class Foo3 {
     return this.foo
   }
 }
+
+export namespace Foo4 { }

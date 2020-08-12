@@ -13,6 +13,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/member-delimiter-style': ['warn', { multiline: { delimiter: 'none' }, singleline: { delimiter: 'comma' }}],
+    '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/no-unused-vars-experimental': 'warn',
     '@typescript-eslint/strict-boolean-expressions': 'warn',
     '@typescript-eslint/switch-exhaustiveness-check': 'warn',
