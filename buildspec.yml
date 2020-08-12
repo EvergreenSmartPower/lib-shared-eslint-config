@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+  pre_build:
+    commands:
+      - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION)"
+      - DOCKER_TAG="na:${TAG}"
+  build:
+    commands:
+      - make build-image
+      - make test-in-container
+      - bash npm-publish-from-docker.sh "${DOCKER_TAG}"
