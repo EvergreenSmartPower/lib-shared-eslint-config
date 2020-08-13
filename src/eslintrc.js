@@ -18,7 +18,8 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'warn',
     '@typescript-eslint/switch-exhaustiveness-check': 'warn',
     '@typescript-eslint/type-annotation-spacing': 'warn',
-    'no-useless-constructor': 'off'
+    'no-useless-constructor': 'off',
+    'import/export': 'off'
   },
   overrides: [
     {
@@ -28,8 +29,7 @@ module.exports = {
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/no-unsafe-call': 'off',
-        '@typescript-eslint/no-unsafe-member-access': 'off',
-        'import/export': 'off'
+        '@typescript-eslint/no-unsafe-member-access': 'off'
       }
     }
   ]
