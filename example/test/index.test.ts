@@ -11,3 +11,8 @@ const bar = {
 } as Bar | undefined
 
 bar!.fn()
+
+export function baz () {
+  const foo: any = 'something'
+  return foo
+}
