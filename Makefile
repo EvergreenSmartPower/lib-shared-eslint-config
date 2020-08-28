@@ -1,15 +1,10 @@
 export PATH := $(shell pwd)/node_modules/.bin:$(PATH)
-DOCKER_TAG ?= shared-eslint-config:latest
 
-.PHONY: build test lint audit test-in-container
+.PHONY: test test-lint lint audit
 
-test-in-container:
-	docker run -t --rm $(DOCKER_TAG)
+test: test-lint audit
 
-build-image:
-	bash ./docker-build.sh $(DOCKER_TAG)
-
-test:
+test-lint:
 	cd example && ../node_modules/.bin/eslint './{src,test}/**/*.{ts,tsx}' --max-warnings 0
 
 lint:
