@@ -14,4 +14,6 @@ fi
 echo "Local version: ${LOCAL_VERSION} != Published version: ${PUBLISHED_VERSION}."
 echo "Publishing ${LOCAL_VERSION}"
 
+echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
+
 npm publish
