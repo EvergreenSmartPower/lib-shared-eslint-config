@@ -10,5 +10,4 @@ phases:
     commands:
       - npm ci
       - make test
-      - make build-image
       - bash npm-publish.sh
