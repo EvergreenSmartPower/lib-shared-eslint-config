@@ -3,7 +3,7 @@
 set -euo pipefail
 
 echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
-NPM_TOKEN=$(aws ssm get-parameter --region eu-west-1 --name /CodePipeline/NpmToken --with-decryption --query "Parameter.Value" --output text)
+export NPM_TOKEN=$(aws ssm get-parameter --region eu-west-1 --name /CodePipeline/NpmToken --with-decryption --query "Parameter.Value" --output text)
 
 PACKAGE_NAME=$(node -e 'console.log(require("./package.json").name)')
 LOCAL_VERSION=$(node -e 'console.log(require("./package.json").version)')
