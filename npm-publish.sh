@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
 NPM_TOKEN=$(aws ssm get-parameter --region eu-west-1 --name /CodePipeline/NpmToken --with-decryption --query "Parameter.Value" --output text)
 
 PACKAGE_NAME=$(node -e 'console.log(require("./package.json").name)')
@@ -13,7 +14,5 @@ if [[ "${LOCAL_VERSION}" = "${PUBLISHED_VERSION}" ]] ; then
 fi
 echo "Local version: ${LOCAL_VERSION} != Published version: ${PUBLISHED_VERSION}."
 echo "Publishing ${LOCAL_VERSION}"
-
-echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
 
 npm publish
