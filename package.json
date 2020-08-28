@@ -16,7 +16,7 @@
     "url": "git+https://github.com/EvergreenSmartPower/shared-eslint-config.git"
   },
   "author": "evergreen-smart-power",
-  "license": "UNLICENCED",
+  "license": "LGPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/EvergreenSmartPower/shared-eslint-config/issues"
   },
