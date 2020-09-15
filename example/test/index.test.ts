@@ -6,9 +6,7 @@ type Bar = {
   fn: () => void
 }
 
-const bar = {
-  fn: () => undefined
-} as Bar | undefined
+const bar: Bar | undefined = undefined as Bar | undefined
 
 bar!.fn()
 

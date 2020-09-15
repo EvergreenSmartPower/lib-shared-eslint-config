@@ -31,7 +31,7 @@ const foo = undefined as Foo2 | undefined
 foo?.bar()
 
 export class Foo3 {
-  constructor (private foo: string) { }
+  constructor (private readonly foo: string) { }
 
   bar () {
     return this.foo
