@@ -7,15 +7,16 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
-    '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
-    '@typescript-eslint/no-namespace': 'off',
-    '@typescript-eslint/switch-exhaustiveness-check': 'warn',
+    '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'error',
     '@typescript-eslint/no-unsafe-call': 'error',
     '@typescript-eslint/no-unsafe-member-access': 'error',
     '@typescript-eslint/no-unsafe-return': 'error',
+    '@typescript-eslint/switch-exhaustiveness-check': 'warn',
+    'import/export': 'off',
   },
   overrides: [
     {

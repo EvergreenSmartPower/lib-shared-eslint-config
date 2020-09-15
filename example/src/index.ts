@@ -38,4 +38,4 @@ export class Foo3 {
   }
 }
 
-export namespace Foo4 { }
+export namespace Foo3 { }
