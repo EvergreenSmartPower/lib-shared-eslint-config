@@ -17,6 +17,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-return': 'error',
     '@typescript-eslint/switch-exhaustiveness-check': 'warn',
     'import/export': 'off',
+    'no-case-declarations': 'off',
   },
   overrides: [
     {

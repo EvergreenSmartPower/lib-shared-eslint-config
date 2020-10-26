@@ -16,7 +16,8 @@ export function test3 (): string {
   const test3 = 'foo' as 'foo' | 'bar' | 'baz'
   switch (test3) {
     case 'foo':
-      return 'foo'
+      const hello = 'foo'
+      return hello
     default:
       return 'default'
   }
