@@ -7,6 +7,7 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
+    '@typescript-eslint/consistent-type-assertions': ['error', { 'assertionStyle': 'never' }],
     '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'error',
@@ -23,6 +24,7 @@ module.exports = {
     {
       "files": ["./test/**/*.{ts,tsx}"],
       "rules": {
+        '@typescript-eslint/consistent-type-assertions': ['error', { 'assertionStyle': 'as' }],
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-unsafe-assignment': 'off',

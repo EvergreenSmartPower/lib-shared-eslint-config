@@ -7,14 +7,18 @@ export type Foo = {
 
 export type Bar = { foo: string, bar: string }
 
-const test2 = 'truthy' as string | undefined
-if (test2 !== undefined) {
+function test2 (): string | undefined {
+  return 'truthy'
+}
+if (test2() !== undefined) {
   test()
 }
 
 export function test3 (): string {
-  const test3 = 'foo' as 'foo' | 'bar' | 'baz'
-  switch (test3) {
+  function getMeAFooBarOrBaz (): 'foo' | 'bar' | 'baz' {
+    return 'foo'
+  }
+  switch (getMeAFooBarOrBaz()) {
     case 'foo':
       const hello = 'foo'
       return hello
@@ -27,9 +31,11 @@ type Foo2 = {
   bar: () => void
 }
 
-const foo = undefined as Foo2 | undefined
+function foo2 (): Foo2 | undefined {
+  return undefined
+}
 
-foo?.bar()
+foo2()?.bar()
 
 export class Foo3 {
   constructor (private readonly foo: string) { }
