@@ -1,6 +1,6 @@
 {
   "name": "@evergreen-smart-power/eslint-config",
-  "version": "3.0.8-alpha-sp502.1",
+  "version": "3.0.8-alpha-sp502.2",
   "description": "Shared Evergreen Smart Power ESLint config",
   "main": "src/eslintrc.js",
   "files": [
